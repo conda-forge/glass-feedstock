@@ -144,7 +144,6 @@ Feedstock Maintainers
 =====================
 
 * [@Saransh-cpp](https://github.com/Saransh-cpp/)
-
-
-<!-- dummy commit to enable rerendering -->
+* [@ntessore](https://github.com/ntessore/)
+* [@paddyroddy](https://github.com/paddyroddy/)
 
