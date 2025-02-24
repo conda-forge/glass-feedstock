@@ -1,5 +1,5 @@
 {% set name = "glass" %}
-{% set version = "2024.2" %}
+{% set version = "2025.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/glass-{{ version }}.tar.gz
-  sha256: 0041b256f4517093bf3b1671e9582134c222a18863d7ef77c656778a03927df2
+  sha256: 7b1aa2394e16010f7f1b4243f49e7e12d7a4dd28fcbf3e3f7cf25ce4905a8615
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   host:
@@ -24,24 +24,25 @@ requirements:
   run:
     - python >={{ python_min }}
     - cosmology >=2022.10.9
-    - gaussiancl >=2022.10.21
     - healpix >=2022.11.1
     - healpy >=1.15.0
-    - numpy >=1.22.0
+    - numpy >=2.1.1
+    - transformcl >=2022.8.9
 
 test:
   imports:
     - glass
+    - glass.algorithm
+    - glass.arraytools
     - glass.fields
     - glass.galaxies
+    - glass.grf
     - glass.lensing
     - glass.observations
     - glass.points
     - glass.shapes
     - glass.shells
     - glass.user
-    - glass.core.algorithm
-    - glass.core.array
   commands:
     - pip check
   requires:
