@@ -3,7 +3,7 @@ About glass-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/glass-feedstock/blob/main/LICENSE.txt)
 
-Home: https://glass.readthedocs.io
+Home: https://glass.readthedocs.io/
 
 Package license: MIT
 
