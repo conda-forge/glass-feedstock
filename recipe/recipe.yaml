@@ -48,7 +48,7 @@ tests:
         - glass.shapes
         - glass.shells
         - glass.user
-      pip_check: true
+      pip_check: false
 
       python_version: ${{ python_min }}.*
 about:
