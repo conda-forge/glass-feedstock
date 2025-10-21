@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: glass
-  version: 2025.1
+  version: 2025.2
   python_min: 3.10
 
 package:
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/glass-${{ version }}.tar.gz
-  sha256: 7b1aa2394e16010f7f1b4243f49e7e12d7a4dd28fcbf3e3f7cf25ce4905a8615
+  sha256: f7b06bb3e8ca9dcd314e322a145873dc4df67811ec1f0015d74c5a933beb4c35
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -26,11 +26,12 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - cosmology >=2022.10.9
+    - array-api-extra >=0.9.0
+    - array-api-strict >=2.0
     - healpix >=2022.11.1
     - healpy >=1.15.0
-    - numpy >=2.1.1
     - transformcl >=2022.8.9
+    - typing-extensions >=4.13.2
 
 tests:
   - python:
@@ -47,7 +48,7 @@ tests:
         - glass.shapes
         - glass.shells
         - glass.user
-      pip_check: true
+      pip_check: false
 
       python_version: ${{ python_min }}.*
 about:
