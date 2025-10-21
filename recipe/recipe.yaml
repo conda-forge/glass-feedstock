@@ -14,7 +14,7 @@ source:
   sha256: f7b06bb3e8ca9dcd314e322a145873dc4df67811ec1f0015d74c5a933beb4c35
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -26,11 +26,12 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - cosmology >=2022.10.9
+    - array-api-extra >=0.9.0
+    - array-api-strict >=2.0
     - healpix >=2022.11.1
     - healpy >=1.15.0
-    - numpy >=2.1.1
     - transformcl >=2022.8.9
+    - typing-extensions >=4.13.2
 
 tests:
   - python:
@@ -38,9 +39,11 @@ tests:
         - glass
         - glass.algorithm
         - glass.arraytools
+        - glass.cosmology
         - glass.fields
         - glass.galaxies
         - glass.grf
+        - glass.jax
         - glass.lensing
         - glass.observations
         - glass.points
