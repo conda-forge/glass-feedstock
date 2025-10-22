@@ -27,11 +27,9 @@ requirements:
   run:
     - python >=${{ python_min }}
     - array-api-extra >=0.9.0
-    - array-api-strict >=2.0
     - healpix >=2022.11.1
     - healpy >=1.15.0
     - transformcl >=2022.8.9
-    - typing-extensions >=4.13.2
 
 tests:
   - python:
