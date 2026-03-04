@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: glass
-  version: "2025.3"
+  version: "2026.1"
   python_min: 3.10
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/glass-${{ version }}.tar.gz
-  sha256: 1f55bd5e85dc4eb3964bc6cf9a61e8da0cba4b3ecd60531d58384a27debcda3d
+  sha256: 75a855208055efdc972bdc9ea78c55899a09e72de752cdfb59575fe2d5200724
 
 build:
   number: 0
