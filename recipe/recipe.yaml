@@ -3,7 +3,7 @@ schema_version: 1
 context:
   name: glass
   version: "2026.2"
-  python_min: 3.10
+  python_min: 3.11
 
 package:
   name: ${{ name|lower }}
@@ -28,10 +28,10 @@ requirements:
   run:
     - python >=${{ python_min }}
     - array-api-compat >=1.12.0
-    - array-api-extra >=0.9.0
+    - array-api-extra >=0.10.3
     - healpix >=2022.11.1
     - healpy >=1.15.0
-    - transformcl >=2022.8.9
+    - transformcl >=2026.1
 
 tests:
   - python:
@@ -43,6 +43,7 @@ tests:
         - glass.galaxies
         - glass.grf
         - glass.harmonics
+        - glass.healpix
         - glass.lensing
         - glass.observations
         - glass.points
